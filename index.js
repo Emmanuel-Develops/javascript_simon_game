@@ -115,6 +115,7 @@ let level = 0;
 let highScore = 0;
 let randColorSequence = [];
 let mySequence = [];
+let gameStarted = false;
 
 // get and animate a random color
 function getRandColor() {
@@ -147,9 +148,10 @@ function playSound(sound) {
 $(document).keypress(function () {
   // level = 0 at the start of the code, and set to 0 if the game fails, to try again
   // it's like a loop based on the event listener
-  if (level == 0) {
+  if (!gameStarted) {
     $("h1").text(`Repeat the pattern`);
     gameStart(level);
+    gameStarted = true;
   }
 });
 
@@ -207,6 +209,7 @@ function gameOver() {
     test1.textContent = `Highscore: ${highScore}`;
   }
   level = 0;
+  gameStarted = false;
 }
 
 // Add an HighScore element without html and update it
