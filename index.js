@@ -145,15 +145,26 @@ function playSound(sound) {
 }
 
 // Start game only when a key is pressed initially
-$(document).keypress(function () {
+$(document).keypress(
+  initialInput
   // level = 0 at the start of the code, and set to 0 if the game fails, to try again
   // it's like a loop based on the event listener
+  // if (!gameStarted) {
+  //   $("#level-title").text(`Repeat the pattern`);
+  //   gameStart(level);
+  //   gameStarted = true;
+  // }
+);
+
+$(".start-btn").click(initialInput);
+
+function initialInput() {
   if (!gameStarted) {
-    $("h1").text(`Repeat the pattern`);
+    $("#level-title").text(`Repeat the pattern`);
     gameStart(level);
     gameStarted = true;
   }
-});
+}
 
 // This would be a loop the game comes back to after every success
 function gameStart(level) {
@@ -203,11 +214,12 @@ function gameOver() {
   playSound("wrong");
   mySequence = [];
   randColorSequence = [];
-  document.querySelector("h1").textContent = `Wrong, Your score is ${level} Press any key to try again`;
+  $("#level-title").html(`Wrong, Your score is ${level} Press any key to try again or <button class="start-btn level-title">Start</button>`);
   if (level > highScore) {
     highScore = level;
     test1.textContent = `Highscore: ${highScore}`;
   }
+  $(".start-btn").click(initialInput);
   level = 0;
   gameStarted = false;
 }

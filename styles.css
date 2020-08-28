@@ -9,29 +9,29 @@ body {
   margin: 0 auto;
 }
 
-#level-title {
+.level-title {
   font-family: "Press Start 2P", cursive;
   font-size: 3rem;
   margin: 0;
   padding: 0;
-  margin-top: max(70px, 10vh);
+  margin-top: max(70px, 12vh);
   line-height: 1.5;
   color: #f8e9a8;
+  background-color: #e0e5ec;
   text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.8);
   /* outline: 2px solid green; */
 }
 
+.lg-header-title {
+  font-size: 3rem;
+}
+
 .start-btn {
-  display: block;
-  margin: 0 auto;
-  /* cursor: pointer; */
-  /* outline: 2px solid yellow; */
+  /* display: none; */
+  margin: 10px auto 0;
   outline: none;
   border: none;
-  font-family: "Press Start 2P", cursive;
-  color: #f8e9a8;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.8);
-  font-size: 0.6em;
+  font-size: 2rem;
   padding: 0.4em 1em;
   box-shadow: 5px 5px 3px 0px #0001, 7px 7px 20px 0px #0002, -5px -5px 3px 0px #fff9, -7px -7px 20px 0px #fff9;
   border-radius: 1rem;
@@ -197,10 +197,10 @@ body {
   html {
     font-size: 0.6rem;
   }
-  #level-title {
-    visibility: hidden;
+  .lg-header-title {
+    display: none;
   }
   .start-btn {
-    visibility: visible;
+    display: block;
   }
 }
