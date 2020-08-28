@@ -198,7 +198,7 @@ function checkSequence() {
     // Increment level
     level++;
     // Display current level
-    $("h1").text(`level ${level}`);
+    $("#level-title").text(`level ${level}`);
     mySequence = [];
     gameStart(level);
   } else {
