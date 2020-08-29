@@ -214,7 +214,7 @@ function gameOver() {
   playSound("wrong");
   mySequence = [];
   randColorSequence = [];
-  $("#level-title").html(`Wrong, Your score is ${level} Press any key to try again or <button class="start-btn level-title">Start</button>`);
+  $("#level-title").html(`Wrong, Your score is ${level} <h1 class="lg-header-title">Press any key to try again</h1><span class="start-mobile"><button class="start-btn level-title">Start</button></span>`);
   if (level > highScore) {
     highScore = level;
     test1.textContent = `Highscore: ${highScore}`;
