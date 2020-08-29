@@ -107,8 +107,8 @@ body {
 .btn:active {
   transform: translate(0, 0);
   animation-name: popout;
-  animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -152,7 +152,7 @@ body {
 .pressed {
   position: relative;
   box-shadow: inset 5px 5px 5px 0px #0002, inset 4px 4px 10px 0px #0002, inset -3px -3px 5px 0px #fff9, inset -4px -4px 8px 0px #fff9;
-  transition: box-shadow linear 1s;
+  /* transition: box-shadow linear 1s; */
 }
 
 .pressed::before {

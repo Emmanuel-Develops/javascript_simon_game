@@ -135,7 +135,7 @@ function animatePress(colorDiv) {
   setTimeout(() => {
     //   colorDiv.classList.remove("pressed"); - vanilla JS
     colorDiv.removeClass("pressed");
-  }, 1500);
+  }, 1000);
 }
 
 // play sound
