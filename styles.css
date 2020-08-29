@@ -26,8 +26,11 @@ body {
   font-size: 3rem;
 }
 
+.start-mobile {
+  display: none;
+}
+
 .start-btn {
-  /* display: none; */
   margin: 10px auto 0;
   outline: none;
   border: none;
@@ -183,7 +186,7 @@ body {
   position: absolute;
   font-family: "Press Start 2P", cursive;
   font-size: 1.3rem;
-  text-shadow: 2px 2px 5px rgb(107, 107, 107);
+  text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.8);
   text-align: center;
   color: #fef2bf;
   top: 0;
@@ -193,6 +196,17 @@ body {
   box-shadow: inset 2px 2px 5px 0px #0002, inset 4px 4px 8px 0px #0002, inset -2px -2px 3px 0px #fff9, inset -4px -4px 8px 0px #fff9;
 }
 
+@media (max-width: 1200px) {
+  html {
+    font-size: 0.8rem;
+  }
+  /* .lg-header-title {
+    display: none;
+  } */
+  .start-mobile {
+    display: block;
+  }
+}
 @media (max-width: 600px) {
   html {
     font-size: 0.6rem;
